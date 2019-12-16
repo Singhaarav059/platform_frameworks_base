@@ -370,6 +370,10 @@ public class MobileSignalController extends SignalController<
 
     @Override
     public int getQsCurrentIconId() {
+        if (mCurrentState.airplaneMode) {
+            return SignalDrawable.getAirplaneModeState(getNumLevels());
+        }
+
         return getCurrentIconId();
     }
 
