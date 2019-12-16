@@ -95,8 +95,10 @@ public class SignalDrawable extends DrawableWrapper {
 
     public SignalDrawable(Context context) {
         super(context.getDrawable(com.android.internal.R.drawable.ic_signal_cellular));
-        mDarkModeFillColor = Utils.getColorStateListDefaultColor(context, R.color.dark_mode_icon_color_single_tone);
-        mLightModeFillColor = Utils.getColorStateListDefaultColor(context, R.color.light_mode_icon_color_single_tone);
+        mDarkModeFillColor = Utils.getColorStateListDefaultColor(context,
+                R.color.dark_mode_icon_color_single_tone);
+        mLightModeFillColor = Utils.getColorStateListDefaultColor(context,
+                R.color.light_mode_icon_color_single_tone);
         mIntrinsicSize = context.getResources().getDimensionPixelSize(R.dimen.signal_icon_size);
         mTransparentPaint.setColor(context.getColor(android.R.color.transparent));
         mTransparentPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
