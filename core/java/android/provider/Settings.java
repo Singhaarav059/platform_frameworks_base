@@ -4865,6 +4865,26 @@ public final class Settings {
          */
         public static final String SCREENSHOT_DEFAULT_MODE = "screenshot_default_mode";
 
+	/**
+         * whether to enable or disable battery bar on lock screen
+         *
+         * @hide
+         */
+        public static final String SYSUI_KEYGUARD_SHOW_BATTERY_BAR = "sysui_keyguard_show_battery_bar";
+        /** @hide */
+        private static final Validator SYSUI_KEYGUARD_SHOW_BATTERY_BAR_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * whether to always show battery bar on lock screen
+         *
+         * @hide
+         */
+        public static final String SYSUI_KEYGUARD_SHOW_BATTERY_BAR_ALWAYS = "sysui_keyguard_show_battery_bar_always";
+        /** @hide */
+        private static final Validator SYSUI_KEYGUARD_SHOW_BATTERY_BAR_ALWAYS_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
         /**
          * @hide
          */
@@ -6093,6 +6113,8 @@ public final class Settings {
             SHOW_BATTERY_PERCENT,
             NOTIFICATION_VIBRATION_INTENSITY,
             HAPTIC_FEEDBACK_INTENSITY,
+	    SYSUI_KEYGUARD_SHOW_BATTERY_BAR,
+            SYSUI_KEYGUARD_SHOW_BATTERY_BAR_ALWAYS,
             DISPLAY_COLOR_MODE,
             NOTIFICATION_LIGHT_PULSE,
             QS_LAYOUT_ROWS,
@@ -6470,6 +6492,8 @@ public final class Settings {
             VALIDATORS.put(WEATHER_LOCKSCREEN_UNIT, WEATHER_LOCKSCREEN_UNIT_VALIDATOR);
             VALIDATORS.put(FACE_AUTO_UNLOCK, FACE_AUTO_UNLOCK_VALIDATOR);
             VALIDATORS.put(DISPLAY_CUTOUT_HIDDEN, DISPLAY_CUTOUT_HIDDEN_VALIDATOR);
+	    VALIDATORS.put(SYSUI_KEYGUARD_SHOW_BATTERY_BAR, SYSUI_KEYGUARD_SHOW_BATTERY_BAR_VALIDATOR);
+            VALIDATORS.put(SYSUI_KEYGUARD_SHOW_BATTERY_BAR_ALWAYS, SYSUI_KEYGUARD_SHOW_BATTERY_BAR_ALWAYS_VALIDATOR);
             VALIDATORS.put(FORCE_FULLSCREEN_CUTOUT_APPS, FORCE_FULLSCREEN_CUTOUT_APPS_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_LOW_BLINKING, BATTERY_LIGHT_LOW_BLINKING_VALIDATOR);
             VALIDATORS.put(INCALL_FEEDBACK_VIBRATE, INCALL_FEEDBACK_VIBRATE_VALIDATOR);
