@@ -82,4 +82,6 @@
     <dimen name="ambient_indication_margin_bottom">71dp</dimen>
     <dimen name="ambient_indication_margin_bottom_fingerprint_in_display">97dp</dimen>
 
+    <dimen name="battery_bar_view_height">6dp</dimen>
+
 </resources>
